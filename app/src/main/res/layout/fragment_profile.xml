@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView enables scrolling when all these medical inputs fill the screen -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Screen Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient Profile Details"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- 1. Full Name Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Enter full name"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Row for Age and Gender to save screen vertical space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+
+            <!-- 2. Age Field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginBottom="2dp"/>
+                <EditText
+                    android:id="@+id/etProfileAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Years"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:inputType="number"
+                    android:background="@android:drawable/editbox_background_normal"/>
+            </LinearLayout>
+
+            <!-- 3. Gender Field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginBottom="2dp"/>
+                <EditText
+                    android:id="@+id/etProfileGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Male/Female/Other"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:inputType="text"
+                    android:background="@android:drawable/editbox_background_normal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 4. Blood Group Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etProfileBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="e.g. O+, A+, B-"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:inputType="textCapCharacters"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 5. Chronic Conditions Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chronic Medical Conditions"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etProfileConditions"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="e.g. Diabetes, Hypertension, None"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 6. Emergency Contact Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Contact Name"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etEmergencyName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Name of contact person"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 7. Emergency Contact Phone Number -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Phone Number"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/etEmergencyContact"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Phone number"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Save Button Action -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save Profile"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Logout Action Button -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Logout"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#D32F2F"/>
+
+    </LinearLayout>
+</ScrollView>
