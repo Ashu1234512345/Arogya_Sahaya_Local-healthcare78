@@ -1,8 +1,3 @@
-Here is the exact file content ready for you to copy.
-
-Just copy everything from `# Arogya Sahaya Local` down to the very end, paste it directly into your `README.md` file in Android Studio, and push it to GitHub!
-
----
 
 # Arogya Sahaya Local - Digital Healthcare Companion
 
